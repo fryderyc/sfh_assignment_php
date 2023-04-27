@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halifax Canoe & Kayak</title>
     <link rel="stylesheet" href="style.css">
+    <?php include 'header.php'; ?>
 </head>
 
 <body>
-    <header>
-        <?php include 'header.php'; ?>
-    </header>
     <main class="form-page">
         <div class="form-box">
             <form method="POST" action="problem.php" required>

@@ -1,26 +1,22 @@
 <?php
-$first_name = $_POST['firstNames'];
+session_start();
+$first_name = $_POST['firstName'];
 $last_name = $_POST['lastName'];
 $role = $_POST['role'];
-
-session_start();
 $_SESSION["current_user"] = $first_name . " " . $last_name;
 ?>
 
-<!DOCTYPE html>
 <html>
 
 <head>
+    <?php include('header.php'); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halifax Canoe & Kayak</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
 </head>
 
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
     <main class="content">
         <h1>Welcome
             <?php echo $first_name . ' ' . $last_name; ?>!
